@@ -85,6 +85,7 @@ async def upload_audio(file: UploadFile = File(...)):
 # 📄 Generate PDF Report
 # ---------------------------------------------------------
 @app.post("/generate-pdf/")
+@app.post("/generate-pdf")
 async def generate_pdf(request: Request):
     try:
         data = await request.json()
