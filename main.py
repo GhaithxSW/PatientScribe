@@ -14,7 +14,7 @@ from summarizer import generate_ai_summary
 from transcription import transcribe_audio
 from data_extraction import extract_patient_data
 
-app = FastAPI()
+app = FastAPI(redirect_slashes=True)
 
 # ---------------------------------------------------------
 # ✅ CORS Configuration (allow frontend to call backend)
