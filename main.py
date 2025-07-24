@@ -47,6 +47,7 @@ def root():
 # 🎤 Upload Audio, Transcribe, Extract Info
 # ---------------------------------------------------------
 @app.post("/upload/")
+@app.post("/upload")
 async def upload_audio(file: UploadFile = File(...)):
     try:
         upload_dir = os.path.join(os.path.dirname(__file__), "uploads")
